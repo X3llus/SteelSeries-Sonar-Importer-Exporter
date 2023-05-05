@@ -79,6 +79,7 @@ def main():
 
     root = tk.Tk()
     root.title("Sonar Config Exporter/Importer")
+    root.resizable(False, False)
 
     change_db_button = tk.Button(root, text="Change Database File", command=set_database_file)
     change_db_button.grid(row=0, column=2, padx=(10, 10), pady=(10, 5))
