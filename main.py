@@ -44,15 +44,9 @@ def main():
         new_database_file = filedialog.askopenfilename(filetypes=[("Database Files", "*.db")])
         if new_database_file:
             conn = connect_to_db(new_database_file)
-    
-    def delete_entries_with_schema_version_3(conn):
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM configs WHERE schema_version = ?", (3,))
-        conn.commit()
 
     database_file = r"C:\ProgramData\SteelSeries\GG\apps\sonar\db\database.db"
     conn = connect_to_db(database_file)
-    delete_entries_with_schema_version_3(conn)
 
     vad_mapping = {"Game": 1, "Chat": 2, "Mic": 3, "Media": 4, "Aux": 5}
 
