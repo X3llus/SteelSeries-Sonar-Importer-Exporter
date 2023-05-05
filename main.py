@@ -84,7 +84,7 @@ def main():
     change_db_button = tk.Button(root, text="Change Database File", command=set_database_file)
     change_db_button.grid(row=0, column=2, padx=(10, 10), pady=(10, 5))
 
-    vad_label = tk.Label(root, text="VAD:")
+    vad_label = tk.Label(root, text="Profile Type:")
     vad_label.grid(row=1, column=0, padx=(10, 5), pady=(5, 10))
 
     vad_var = tk.StringVar(root)
